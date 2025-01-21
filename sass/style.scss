@@ -1,0 +1,25 @@
+/* /////////////////////////////// */
+/*
+Theme Name: 4W4-MassimoTrimboli
+Theme URI: https://referenced.ca
+Author: Massimo Trimboli
+Author URI: https://github.com/massimo-trimboli
+Description: theme de base pour cours 4w4
+version: 1.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 4w4-massimo
+*/
+
+/* ////////////////////
+les variables
+////////////////////// */
+@import "variable/couleure";
+
+/* ////////////////////
+les composantes
+////////////////////// */
+@import "composante/menu";
+@import "composante/carte";
