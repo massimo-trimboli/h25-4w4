@@ -18,16 +18,18 @@ les variables
 /* ////////////////////
 les composantes
 ////////////////////// */
-.menu ul {
+.menu {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
-.menu ul li {
+.menu__li {
   display: inline-block;
 }
-.menu ul li a {
+.menu__a {
   color: #333;
   text-decoration: none;
+  padding: 2px 5px;
 }
 
 .carte {
@@ -67,4 +69,37 @@ les composantes
 }
 .carte__bouton:hover {
   background-color: #0056b3;
+}
+
+/* ////////////////////
+layout
+////////////////////// */
+.global {
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("images/maldives.jpg");
+}
+
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: none;
+  width: 100%;
+}
+.entete__nav {
+  display: flex;
+  align-items: center;
+}
+.entete__logo {
+  height: 5vh;
+  width: auto;
+  margin-bottom: 0;
+}
+.entete__logo__img {
+  height: 100%;
+  width: auto;
 }/*# sourceMappingURL=style.css.map */
