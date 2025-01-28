@@ -19,9 +19,19 @@ les variables
 les composantes
 ////////////////////// */
 .menu {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: row;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+@media screen and (max-width: 500px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5px;
+  }
 }
 .menu__li {
   display: inline-block;
@@ -71,11 +81,34 @@ les composantes
   background-color: #0056b3;
 }
 
+.recherche {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  align-items: center;
+  font-size: 1.1rem;
+}
+.recherche__input {
+  flex: 1;
+  height: 1.3rem;
+  padding: 2px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.recherche__input--hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.recherche__img {
+  flex: 0 0 20px;
+  padding: 0 3px;
+}
+
 /* ////////////////////
 layout
 ////////////////////// */
 .global {
   margin: 0 auto;
+  max-width: 1100px;
 }
 
 .hero {
@@ -84,6 +117,7 @@ layout
 }
 
 .entete {
+  max-width: 98vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,7 +126,17 @@ layout
 }
 .entete__nav {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 0 40px;
+  flex-wrap: wrap-reverse;
+}
+@media screen and (max-width: 500px) {
+  .entete__nav {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
 }
 .entete__logo {
   height: 5vh;
