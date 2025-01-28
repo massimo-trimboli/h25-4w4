@@ -16,6 +16,9 @@ Text Domain: 4w4-massimo
 les variables
 ////////////////////// */
 /* ////////////////////
+les bases
+////////////////////// */
+/* ////////////////////
 les composantes
 ////////////////////// */
 .menu {
@@ -37,8 +40,6 @@ les composantes
   display: inline-block;
 }
 .menu__a {
-  color: #333;
-  text-decoration: none;
   padding: 2px 5px;
 }
 
@@ -107,13 +108,60 @@ les composantes
 layout
 ////////////////////// */
 .global {
-  margin: 0 auto;
+  padding: 50px;
   max-width: 1100px;
+  font-family: "Roboto", serif;
 }
 
 .hero {
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
+}
+.hero__contenu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: auto;
+  align-items: flex-start;
+}
+.hero__titre {
+  margin: 13px;
+  font-size: 3rem;
+  text-shadow: 3px 3px 3px rgb(11, 128, 136);
+}
+.hero__description {
+  margin: 10px;
+}
+.hero__courriel {
+  margin: 10px;
+}
+.hero__bouton {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: rgb(152, 255, 221);
+  border: 2px solid rgb(47, 167, 223);
+}
+.hero__icone-apps {
+  margin: 10px;
+  display: flex;
+  gap: 0 15px;
+}
+
+.burger {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .burger {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.chk__burger:checked ~ .entete__nav {
+  display: flex;
 }
 
 .entete {
@@ -124,8 +172,14 @@ layout
   margin: none;
   width: 100%;
 }
+@media screen and (max-width: 500px) {
+  .entete {
+    height: 15vh;
+  }
+}
 .entete__nav {
   display: flex;
+  position: static;
   flex-direction: row;
   align-items: center;
   gap: 0 40px;
@@ -133,9 +187,16 @@ layout
 }
 @media screen and (max-width: 500px) {
   .entete__nav {
+    display: none;
     flex-direction: column-reverse;
     align-items: flex-start;
     flex-wrap: nowrap;
+    gap: 15px 0;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    height: 15vh;
   }
 }
 .entete__logo {
