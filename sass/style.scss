@@ -17,12 +17,19 @@ Text Domain: 4w4-massimo
 les variables
 ////////////////////// */
 @import "variable/couleure";
+@import "variable/dimensions";
+
+/* ////////////////////
+les bases
+////////////////////// */
+@import "base/lien";
 
 /* ////////////////////
 les composantes
 ////////////////////// */
 @import "composante/menu";
 @import "composante/carte";
+@import "composante/recherche";
 
 /* ////////////////////
 layout

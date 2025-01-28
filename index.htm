@@ -7,13 +7,21 @@
   <title>Document</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="entete global">
+    <div class="entete">
       <figure class="entete__logo">
-        <img src="images/logo.png" alt="logo" class="entete__logo__img">
+        <img src="images/logo3.jpg" alt="logo" class="entete__logo__img">
       </figure>
+      <label for="chk__burger" class="burger">
+        <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
+      </label>
+      <input type="checkbox" class="chk__burger" id="chk__burger">
       <div class="entete__nav">
         <nav class="entete__menu">
           <ul class="menu">
@@ -34,7 +42,7 @@
         <div class="entete__recherche">
           <form action="" class="recherche">
             <input type="text" placeholder="Recherche..." class="recherche__input">
-            <img src="https://s2.svgbox.net/materialui.svg?ic=search&color=000" width="20" height="20"> 
+            <img src="https://s2.svgbox.net/materialui.svg?ic=search&color=000" width="20" height="20" class="recherche__img"> 
           </form>
         </div>
       </div>
@@ -42,25 +50,22 @@
   </header>
 
   <section class="hero">
-    <div class="hero__contenu">
-      <h1 class="hero__titre"></h1>
-      <p class="hero__decription"></p>
-      <a href="" class="hero__courrierl"></a>
-      <button class="hero__bouton"></button>
+    <div class="hero__contenu global">
+      <h1 class="hero__titre">Voyagez Autrement avec PFK Voyages</h1>
+      <p class="hero__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus sed saepe cupiditate sit nam repellendus facilis eos porro, praesentium tenetur rerum assumenda eligendi numquam alias, officiis enim, corrupti ad voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error, doloribus dolor magni at tempore amet. Unde eligendi ipsum, nemo optio, maiores quasi ipsa adipisci praesentium voluptatum, amet a repellendus.</p>
+      <a href="" class="hero__courriel">
+        info@maisonneuve.qc.ca
+      </a>
+      <button class="hero__bouton">
+        inscriptions
+      </button>
+      <div class="hero__icone-apps">
+        <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="32" height="32">
+        <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000000" width="32" height="32">
+        <img src="https://s2.svgbox.net/social.svg?ic=github&color=000000" width="32" height="32">
+      </div>
     </div>
-    <p class="hero__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus sed saepe cupiditate sit nam repellendus facilis eos porro, praesentium tenetur rerum assumenda eligendi numquam alias, officiis enim, corrupti ad voluptate?</p>
-    <a href="" class="hero__courriel">
-      info@maisonneuve.qc.ca
-    </a>
-    <buttun class="hero__bouton">
-      inscriptions
-    </buttun>
-    <div class="hero__icone-apps">
-      <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=000000" width="32" height="32">
-      <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000000" width="32" height="32">
-      <img src="https://s2.svgbox.net/social.svg?ic=github&color=000000" width="32" height="32">
-    </div>
-  </section>
+    </section>
 
   <section class="galerie">
     <figure class="galerie__fig">
@@ -70,9 +75,9 @@
 
   <section class="promotion">
     <div class="carte carte--grande">
-      <div class="carte__image">
+      <figure class="carte__image">
         <img src="images/voyage.jpg" alt="Image de voyage">
-      </div>
+      </figure>
       <div class="carte__contenu">
         <h2 class="carte__titre">Destination de rêve</h2>
         <p class="carte__description">Découvrez des endroits magnifiques à travers le monde.</p>
