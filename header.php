@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <?php bloginfo('normalize.css'); ?>
-  <?php bloginfo('style.css'); ?>
+  <?php bloginfo('css/normalize.css'); ?>
+  <?php bloginfo('css/style.css'); ?>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +14,12 @@
 
   <?php wp_head(); ?>
 </head>
+
 <body>
   <header>
     <div class="entete">
       <figure class="entete__logo">
-        <img src="images/logo3.jpg" alt="logo" class="entete__logo__img">
+        <img src="<?php echo get_template_directory_uri() . '/images/logo3.jpg' ?>" alt="logo" class="entete__logo__img">
       </figure>
       <label for="chk__burger" class="burger">
         <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
