@@ -41,10 +41,12 @@ les composantes
 }
 .menu__a {
   padding: 2px 5px;
+  color: black;
+  text-decoration: none;
 }
 
 .carte {
-  border: 1px solid #ddd;
+  border: 1px solid #cccccc;
   padding: 20px;
   border-radius: 8px;
   width: 20%;
@@ -104,6 +106,17 @@ les composantes
   padding: 0 3px;
 }
 
+.populaire {
+  width: 90vw;
+}
+.populaire__article {
+  border: 1px solid #cccccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 44%;
+  margin: 10px;
+}
+
 /* ////////////////////
 layout
 ////////////////////// */
@@ -111,6 +124,8 @@ layout
   padding: 50px;
   max-width: 1100px;
   font-family: "Roboto", serif;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .hero {
@@ -158,6 +173,10 @@ layout
     top: 10px;
     right: 10px;
   }
+}
+
+.chk__burger {
+  display: none;
 }
 
 .chk__burger:checked ~ .entete__nav {

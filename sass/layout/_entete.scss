@@ -8,7 +8,7 @@
     }
 }
 .chk__burger{
-    // display: none;
+    display: none;
 }
 .chk__burger:checked ~ .entete__nav{
     display: flex;
