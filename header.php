@@ -43,9 +43,12 @@
           </ul>
         </nav>
         <div class="entete__recherche">
-          <form action="" class="recherche">
-            <input type="text" placeholder="Recherche..." class="recherche__input">
-            <img src="https://s2.svgbox.net/materialui.svg?ic=search&color=000" width="20" height="20" class="recherche__img"> 
+          <form action="" class="recherche" method="post">
+            <input type="text" placeholder="Recherche..." class="recherche__input" name="text_field">
+            <label for="submit" class="recherche__img">
+              <img src="https://s2.svgbox.net/materialui.svg?ic=search&color=000" width="20" height="20" class="recherche__img"> 
+            </label>
+            <input type="submit" value="Submit" id="submit">
           </form>
         </div>
       </div>

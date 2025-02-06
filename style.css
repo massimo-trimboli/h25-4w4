@@ -84,6 +84,10 @@ les composantes
   background-color: #0056b3;
 }
 
+#submit {
+  display: none;
+}
+
 .recherche {
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -170,8 +174,8 @@ layout
   .burger {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 70px;
+    right: 20px;
   }
 }
 
