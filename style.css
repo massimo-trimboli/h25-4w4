@@ -45,11 +45,19 @@ les composantes
   text-decoration: none;
 }
 
+.menu a {
+  padding: 2px 5px;
+  color: black;
+  text-decoration: none;
+}
+
 .carte {
   border: 1px solid #cccccc;
   padding: 20px;
   border-radius: 8px;
   width: 20%;
+  margin: 30PX;
+  flex: 1 1 23;
 }
 .carte--grande {
   padding: 40px;

@@ -27,7 +27,14 @@
       <input type="checkbox" class="chk__burger" id="chk__burger">
       <div class="entete__nav">
         <nav class="entete__menu">
-          <ul class="menu">
+          
+        <?php wp_nav_menu(array(
+          'menu' => 'principal',
+          'container' => 'nav',
+          'container_class' => 'menu'
+        )); ?>
+
+          <!-- <ul class="menu">
             <li class="menu__li">
               <a class="menu__a" href="#">Aventure</a>
             </li>
@@ -40,7 +47,7 @@
             <li class="menu__li">
               <a class="menu__a" href="#">Zen</a>
             </li>
-          </ul>
+          </ul> -->
         </nav>
         <div class="entete__recherche">
           <form action="" class="recherche" method="post">

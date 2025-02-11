@@ -8,7 +8,7 @@
 
 
 <?php get_header(); ?>
-
+<h1>front-page</h1>
   <section class="hero">
     <div class="hero__contenu global">
       <h1 class="hero__titre">Voyagez Autrement avec PFK Voyages</h1>
@@ -34,6 +34,8 @@
   </section>
 
   <section class="promotion">
+
+
     <div class="carte carte--grande">
       <figure class="carte__image">
         <img src="images/voyage.jpg" alt="Image de voyage">
@@ -49,10 +51,25 @@
   <section class="populaire">
     <div class="global">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-          <article class="populaire__article">
+        <?php if(in_category('galerie')){
+          the_content();
+        } else{ ?>
+          <!-- <article class="populaire__article">
             <h2 class="populaire__titre"><?php the_title(); ?></h2>
-            <div class="populaire__contenu"><?php echo wp_trim_words(get_the_excerpt(), 10, "..."); ?></div>
-          </article>
+            <div class="populaire__contenu"><?php echo wp_trim_words(get_the_excerpt(), 20, "..."); ?></div>
+          </article> -->
+
+          <div class="carte carte--grande">
+      <figure class="carte__image">
+        <img src="images/voyage.jpg" alt="Image de voyage">
+      </figure>
+      <div class="carte__contenu">
+        <h2 class="carte__titre"><?php the_title(); ?></h2>
+        <p class="carte__description"><?php echo wp_trim_words(get_the_excerpt(), 20, "..."); ?></p>
+        <button class="carte__bouton carte__bouton--actif">Réserver</button>
+      </div>
+    </div>
+          <?php } ?>
         <?php endwhile; endif; ?>
     </div>
   </section>
