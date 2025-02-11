@@ -16,12 +16,12 @@ add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
  * @param WP_query  $query la requête principal de WP
  */
 function modifie_requete_principal( $query ) {
-if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
-  $query->set( 'category_name', 'nouvelle' );
-  $query->set( 'orderby', 'title' );
-  $query->set( 'order', 'ASC' );
-  }
- }
- add_action( 'pre_get_posts', 'modifie_requete_principal' );
+  if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
+    $query->set( 'category_name', 'populaire' );
+    $query->set( 'orderby', 'title' );
+    $query->set( 'order', 'ASC' );
+    }
+   }
+   add_action( 'pre_get_posts', 'modifie_requete_principal' );
 ?>
 
