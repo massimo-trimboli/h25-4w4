@@ -5,14 +5,19 @@
  */
 ?>
 <?php get_header() ?>
-<h1>index.php</h1>
+<h1>single.php</h1>
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article class="populaire__article">
+            <?php
+                    //permet dafficher la petite image (thumbnail) de larticvle quon appel image mise en avant
+                        if(has_post_thumbnail()) {
+                            the_post_thumbnail('medium'); 
+                        }
+                    ?>
                 <h2 class="populaire__titre"><?php the_title(); ?></h2>
-                <p class="populaire__contenu"><?php echo wp_trim_words(get_the_excerpt(), 20, "...") ; ?></p>
-                <a href="<?php the_permalink() ?>" class="carte__bouton carte__bouton--actif">suite</a>
+                <div class="populaire__contenu"><?php the_content(); ?></div>
             </article>
             <?php endwhile; endif; ?>
         </div>
