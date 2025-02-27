@@ -231,13 +231,21 @@ layout
   }
 }
 .entete__logo {
-  height: 5vh;
+  height: auto;
   width: auto;
   margin-bottom: 0;
 }
 .entete__logo__img {
   height: 100%;
   width: auto;
+}
+
+.custom-logo {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 /*
