@@ -3,6 +3,9 @@
     padding: 50px;
     max-width: 1100px;
     font-family: "Roboto", serif;
+
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .hero{

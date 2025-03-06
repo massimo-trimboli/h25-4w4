@@ -41,13 +41,23 @@ les composantes
 }
 .menu__a {
   padding: 2px 5px;
+  color: black;
+  text-decoration: none;
+}
+
+.menu a {
+  padding: 2px 5px;
+  color: black;
+  text-decoration: none;
 }
 
 .carte {
-  border: 1px solid #ddd;
+  border: 1px solid #cccccc;
   padding: 20px;
   border-radius: 8px;
   width: 20%;
+  margin: 30PX;
+  flex: 1 1 23;
 }
 .carte--grande {
   padding: 40px;
@@ -82,6 +92,10 @@ les composantes
   background-color: #0056b3;
 }
 
+#submit {
+  display: none;
+}
+
 .recherche {
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -104,6 +118,17 @@ les composantes
   padding: 0 3px;
 }
 
+.populaire {
+  width: 90vw;
+}
+.populaire__article {
+  border: 1px solid #cccccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 44%;
+  margin: 10px;
+}
+
 /* ////////////////////
 layout
 ////////////////////// */
@@ -111,6 +136,8 @@ layout
   padding: 50px;
   max-width: 1100px;
   font-family: "Roboto", serif;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .hero {
@@ -155,9 +182,13 @@ layout
   .burger {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 70px;
+    right: 20px;
   }
+}
+
+.chk__burger {
+  display: none;
 }
 
 .chk__burger:checked ~ .entete__nav {
@@ -193,18 +224,57 @@ layout
     flex-wrap: nowrap;
     gap: 15px 0;
     position: absolute;
-    top: 50px;
+    top: 95px;
     right: 0;
     background-color: #ffffff;
     height: 15vh;
   }
 }
 .entete__logo {
-  height: 5vh;
+  height: auto;
   width: auto;
   margin-bottom: 0;
 }
 .entete__logo__img {
   height: 100%;
   width: auto;
+}
+
+.custom-logo {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/*
+  --------------------------------- Layout du pied de page
+*/
+footer {
+  background-color: rgb(236, 136, 13);
+  color: #000;
+}
+
+.piedpage {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.piedpage__s1__externe {
+  flex: 0 0 20%;
+}
+.piedpage__s1__externe .menu {
+  display: flex;
+  flex-direction: column;
+}
+.piedpage__s1__adresse {
+  flex: 0 0 40%;
+}
+.piedpage__s1__description {
+  flex: 1 0 300px;
 }/*# sourceMappingURL=style.css.map */

@@ -3,10 +3,12 @@
 /// ////////////////
 
 .carte {
-  border: 1px solid #ddd;
+  border: 1px solid #cccccc;
   padding: 20px;
   border-radius: 8px;
   width: 20%;
+  margin: 30PX;
+  flex: 1 1 23;
 
   &--grande {
     padding: 40px;
