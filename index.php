@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header() ?>
-<h1>index.php</h1>
+<h1 class="hidden">index.php</h1>
     <section class="populaire">
         <div class="global">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

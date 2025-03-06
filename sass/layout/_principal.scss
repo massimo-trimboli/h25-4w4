@@ -43,5 +43,9 @@
         display: flex;
         gap: 0 15px;
     }
-
 } 
+
+.hidden{
+    // visibility: collapse;
+    display: none;
+}

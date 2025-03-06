@@ -49,4 +49,33 @@
       background-color: #0056b3;
     }
   }
+
+  &__contenantBoutons{
+    // background-color: green;
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+    list-style-position: outside;
+
+    & ul,li{
+      list-style: none;
+      list-style-type: none;
+      // list-style-position: outside;
+    }
+
+    & li{
+      margin-top: 25px;
+      position: relative;
+      right: 40px;
+    }
+
+    & a{
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+  }
 }

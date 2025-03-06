@@ -13,7 +13,7 @@
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere porro veniam vitae, tempore corporis omnis nam 
                 </div>
                 <div class="piedpage__s1__adresse__recherche">
-                    <?php get_search_form();   ?>
+                    <?php get_search_form() ?>
                 </div>
             </div>
             <div class="piedpage__s1__description">
