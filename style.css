@@ -166,6 +166,7 @@ layout
 .hero {
   min-height: 100vh;
   background-image: url("images/maldives.jpg");
+  background-repeat: no-repeat;
 }
 .hero__contenu {
   display: flex;
@@ -304,8 +305,4 @@ footer {
 }
 .piedpage__s1__description {
   flex: 1 0 300px;
-}
-
-.menu-item a {
-  color: white;
 }/*# sourceMappingURL=style.css.map */
