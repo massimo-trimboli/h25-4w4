@@ -292,12 +292,15 @@ footer {
 
 .piedpage {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .piedpage__s1 {
+  width: 99%;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  margin: 10px;
 }
 .piedpage__s1__externe {
   flex: 0 0 20%;
@@ -309,6 +312,20 @@ footer {
 .piedpage__s1__adresse {
   flex: 0 0 40%;
 }
+.piedpage__s1__adresse__coord ul {
+  list-style-type: none;
+  list-style-position: outside;
+}
 .piedpage__s1__description {
   flex: 1 0 300px;
+}
+.piedpage__s2 {
+  margin: 20px;
+}
+.piedpage__s3 {
+  margin: 20px;
+}
+
+footer a {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

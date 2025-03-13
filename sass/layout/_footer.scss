@@ -9,11 +9,15 @@ footer{
   
   .piedpage{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
+      
       &__s1{
+        width: 99%;
           display: flex;
           flex-wrap: wrap;
           gap: 3rem;
+          margin: 10px;
           &__externe {
               flex : 0 0 20%;
               & .menu { //ul
@@ -25,11 +29,25 @@ footer{
           }
           &__adresse{
               flex : 0 0 40%;
-              &__coord{}
+              &__coord ul{
+                list-style-type: none;
+                list-style-position: outside;
+              }
               &__recherche{}
           }
           &__description{
               flex:1 0 300px;
           }
       }
+
+      &__s2{
+        margin: 20px;
+      }
+      &__s3{
+        margin: 20px;
+      }
+  }
+
+  footer a{
+    color: white;
   }

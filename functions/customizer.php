@@ -135,6 +135,18 @@ $wp_customize->add_control('hero_adress', array(
       'label' => __('couleur texte footer', 'theme_31w'),
       'section' => 'footer_section',
     )));
+
+    /////////////////////////// couleur svg footer
+    
+    $wp_customize->add_setting('footer_svg_color', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_svg_color', array(
+      'label' => __('couleur svg footer', 'theme_31w'),
+      'section' => 'footer_section',
+    )));
     
     }
     

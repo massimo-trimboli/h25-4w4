@@ -6,7 +6,7 @@
       
       $hero_text_color = get_theme_mod('hero_text_color', 'black');
       $hero_svg_color = get_theme_mod('hero_svg_color', '000000');
-      $hero_svg_color_poundless = substr($hero_svg_color, 1)
+      $svg_color_poundless = substr($hero_svg_color, 1);
 ?>
 <section class="hero" style="background-image: url(<?= $hero_background ?>); background-repeat: no-repeat; color: <?= $hero_text_color ?>;">
         <div class="hero__contenu global">
@@ -29,10 +29,10 @@
                 Inscription
             </button>
             <div class="hero__icone-app">
-                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?= $hero_svg_color_poundless ?>" width="20" height="20" style="color: red;">
-                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=<?= $hero_svg_color_poundless ?>" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=<?= $hero_svg_color_poundless ?>" width="20" height="20">
-                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=<?= $hero_svg_color_poundless ?>" width="20" height="20">
+                <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?= $svg_color_poundless ?>" width="20" height="20" style="color: red;">
+                <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=<?= $svg_color_poundless ?>" width="20" height="20">
+                <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=<?= $svg_color_poundless ?>" width="20" height="20">
+                <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=<?= $svg_color_poundless ?>" width="20" height="20">
             </div>
             <p class="author">Autheur: <?= $hero_author ?></p>
         </div>
