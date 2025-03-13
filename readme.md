@@ -7,4 +7,3 @@ la branche TP1 utilise aussi wordpress/PHP
 
 ## Liens :
 #### <a href="https://gftnth00.mywhc.ca/4w4_43/">Page déployée sur Web Hosting Canada (WHC)</a>
-#### <a href="https://massimo-trimboli.github.io/h25-4w4/">Github-page</a>
