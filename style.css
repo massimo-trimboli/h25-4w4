@@ -186,6 +186,12 @@ layout
 .hero__courriel {
   margin: 10px;
 }
+.hero__phone {
+  margin: 10px;
+}
+.hero__adress {
+  margin: 10px;
+}
 .hero__bouton {
   margin: 10px;
   padding: 7px;

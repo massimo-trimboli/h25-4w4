@@ -29,6 +29,42 @@
         'section' => 'hero_section',
         'type' => 'text',
     ));
+
+    ///////////////////////////////// courriel
+    $wp_customize->add_setting('hero_email', array(
+      'default' => __('email@email.com.', 'theme_31w'),
+      'sanitize_callback' => 'sanitize_text_field',
+  ));
+  
+  $wp_customize->add_control('hero_email', array(
+      'label' => __('hero email', 'theme_31w'),
+      'section' => 'hero_section',
+      'type' => 'text',
+  ));
+
+  ///////////////////////////////// numero de telephone
+  $wp_customize->add_setting('hero_phone', array(
+    'default' => __('123-456-7890', 'theme_31w'),
+    'sanitize_callback' => 'sanitize_text_field',
+));
+
+$wp_customize->add_control('hero_phone', array(
+    'label' => __('hero phone', 'theme_31w'),
+    'section' => 'hero_section',
+    'type' => 'text',
+));
+
+///////////////////////////////// adresse
+$wp_customize->add_setting('hero_adress', array(
+  'default' => __('123 rue adresse ville', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field',
+));
+
+$wp_customize->add_control('hero_adress', array(
+  'label' => __('hero adress', 'theme_31w'),
+  'section' => 'hero_section',
+  'type' => 'text',
+));
     
     //////////////////////////////////////////////////// background
     
@@ -51,6 +87,18 @@
     
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_text_color', array(
       'label' => __('couleur texte hero', 'theme_31w'),
+      'section' => 'hero_section',
+    )));
+
+    /////////////////////////// couleur svg hero
+    
+    $wp_customize->add_setting('hero_svg_color', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_svg_color', array(
+      'label' => __('couleur svg hero', 'theme_31w'),
       'section' => 'hero_section',
     )));
     
