@@ -14,7 +14,7 @@
                 <p class="populaire__contenu"><?php echo wp_trim_words(get_the_excerpt(), 20, "...") ; ?></p>
                 <a href="<?php the_permalink() ?>" class="carte__bouton carte__bouton--actif">suite</a>
             </article>
-            <?php endwhile; endif; ?>
+            <?php endwhile; endif; ?> 
         </div>
     </section>
     <?php get_footer(); ?>
