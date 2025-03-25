@@ -6,7 +6,7 @@
 ?>
 
 <?php get_header() ?>
-<h1 class="hidde">404.php</h1>
+<h1 class="hidden">404.php</h1>
     
 <?php $hero_author = get_theme_mod('hero_author', 'Default Title'); 
       $hero_background = get_theme_mod('hero_background', 'Default Title');
