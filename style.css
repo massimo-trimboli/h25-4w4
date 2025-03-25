@@ -205,8 +205,29 @@ layout
   gap: 0 15px;
 }
 
+.hero.e404 {
+  min-width: 100vw;
+  max-width: 100vw;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero__contenu.e404 {
+  min-width: 50vw;
+  max-width: 50vw;
+  width: 50vw;
+  align-items: center;
+}
+
 .hidden {
   display: none;
+}
+
+.space {
+  margin-bottom: 100px;
 }
 
 .burger {

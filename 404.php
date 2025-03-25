@@ -18,8 +18,8 @@
       $hero_svg_color = get_theme_mod('hero_svg_color', '000000');
       $svg_color_poundless = substr($hero_svg_color, 1);
 ?>
-<section class="hero" style="background-image: url(<?= $hero_background ?>); background-repeat: no-repeat; color: <?= $hero_text_color ?>;">
-        <div class="hero__contenu global">
+<section class="hero e404" style="background-image: url(<?= $hero_background ?>); background-repeat: no-repeat; color: <?= $hero_text_color ?>;">
+        <div class="hero__contenu e404 global">
             <h1 class="hero__titre">
                 404
             </h1>
@@ -27,7 +27,7 @@
             la page n'a pas pu être trouvée
             </p>
 
-            <a href="">
+            <a href="<?= site_url() ?>" class="space">
                 <button class="hero__bouton .retour">retour page principale</button>
             </a>
 
