@@ -27,29 +27,16 @@
             la page n'a pas pu être trouvée
             </p>
 
-            <a href="<?= site_url() ?>" class="space">
+            <a href="<?= site_url() ?>">
                 <button class="hero__bouton .retour">retour page principale</button>
             </a>
 
-            <a href="" class="hero__courriel">
-                <?= $hero_email ?>
-            </a>
-            <a href="" class="hero__phone">
-                <?= $hero_phone ?>
-            </a>
-            <a href="https://www.google.com/maps/place/<?= $hero_adress ?>" target="_blank" rel="noreferrer noopener" class="hero__adress">
-                <?= $hero_adress ?>
-            </a>
-            <button class="hero__bouton">
-                Inscription
-            </button>
             <div class="hero__icone-app">
                 <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?= $svg_color_poundless ?>" width="20" height="20" style="color: red;">
                 <img src="https://s2.svgbox.net/social.svg?ic=linkedin&color=<?= $svg_color_poundless ?>" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=paypal&color=<?= $svg_color_poundless ?>" width="20" height="20">
                 <img src="https://s2.svgbox.net/social.svg?ic=stackoverflow&color=<?= $svg_color_poundless ?>" width="20" height="20">
             </div>
-            <p class="author">Autheur: <?= $hero_author ?></p>
         </div>
     </section>
 
