@@ -33,9 +33,16 @@
             <?= $p404_subtitle ?>
             </p>
 
-            <a href="<?= site_url() ?>">
-                <button class="hero__bouton .retour" style="background-color: <?= $p404_text_color ?>; border:none; border-radius: 3px;">Retour à l'aceuil</button>
+            <a href="<?= site_url() ?>" class="retour">
+                <button class="hero__bouton retour" style="background-color: <?= $p404_text_color ?>; border:none; border-radius: 3px;">Retour à l'aceuil</button>
             </a>
+
+            <?php wp_nav_menu(array(
+          'menu' => 'menu404',
+          'container' => 'div',
+          'container_class' => 'retour'
+        )); ?>
+
         </div>
     </section>
 

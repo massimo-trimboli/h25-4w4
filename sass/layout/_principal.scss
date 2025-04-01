@@ -65,14 +65,51 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-start;
+
+    backdrop-filter: brightness(10%);
 }
 .hero__contenu.e404{
-    min-width: 50vw;
-    max-width: 50vw;
-    width: 50vw;
+    //min-width: 50vw;
+    //max-width: 50vw;
+    //width: 50vw;
+    max-width: 80vw;
 
     align-items: center;
+
+    text-align: center;
 }
+
+.e404 .hero__titre{
+    font-size: 5rem;
+    text-shadow: none;
+
+    background-color: rgba($color: #ffffff, $alpha: 0.11);
+}
+.e404 .hero__description{
+font-size: 1.1rem;
+
+background-color: rgba($color: #ffffff, $alpha: 0.11);
+}
+// bouton
+.hero__contenu.e404 a button.hero__bouton.retour{
+    font-size: 1.6rem;
+    padding: 13px;
+    color: aqua;
+}
+.hero__contenu.e404 .retour{
+    transition: filter .5s;
+}
+.hero__contenu.e404 .retour :hover{
+    filter: invert(80%);
+}
+
+.hero__contenu.e404 .retour .menu li{
+    font-size: 1.6rem;
+    padding: 13px;
+    color: aqua;
+    background-color: red;
+}
+
 
 
 
