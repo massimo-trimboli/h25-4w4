@@ -42,6 +42,18 @@
           'container' => 'div',
           'container_class' => 'retour'
         )); ?>
+        <style>
+            .hero__contenu.e404 .retour .menu li{
+                font-size: 1rem;
+                padding: 13px;
+                color: aqua;
+                background-color: <?= $p404_text_color ?>;
+                margin: 15px;
+
+                transition: filter .5s;
+            }
+}
+        </style>
 
         </div>
     </section>
