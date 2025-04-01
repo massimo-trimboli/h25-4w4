@@ -13,7 +13,8 @@
       //$hero_phone = get_theme_mod('hero_phone', '123-456-7890'); 
       //$hero_adress = get_theme_mod('hero_adress', '123 rue adresse ville'); 
       
-      $hero_background = get_theme_mod('hero_background', 'Default Title');
+      //$hero_background = get_theme_mod('hero_background', 'Default Title');
+      $p404_background = get_theme_mod('p404_background', 'Default Title');
 
       $p404_title = get_theme_mod('p404_title', 'Default Title');
       $p404_subtitle = get_theme_mod('p404_subtitle', 'Default Title');
@@ -23,7 +24,7 @@
       //$hero_svg_color = get_theme_mod('hero_svg_color', '000000');
       //$svg_color_poundless = substr($hero_svg_color, 1);
 ?>
-<section class="hero e404" style="background-image: url(<?= $hero_background ?>); background-repeat: no-repeat; color: <?= $p404_text_color ?>;">
+<section class="hero e404" style="background-image: url(<?= $p404_background ?>); background-repeat: no-repeat; background-position: center; color: <?= $p404_text_color ?>;">
         <div class="hero__contenu e404 global">
             <h1 class="hero__titre">
                 <?= $p404_title ?>

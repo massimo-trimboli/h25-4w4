@@ -195,6 +195,17 @@ $wp_customize->add_control('hero_adress', array(
           'label' => __('couleur texte 404', 'theme_31w'),
           'section' => 'p404_section',
         )));
+
+        /////////////////////// image background
+        $wp_customize->add_setting('p404_background', array(
+          'default' => '',
+          'sanitize_callback' => 'esc_url_raw',
+      ));
+      
+      $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'p404_background', array(
+          'label' => __('404 Background Image', 'theme_31w'),
+          'section' => 'p404_section',
+      )));
     
     }
     
