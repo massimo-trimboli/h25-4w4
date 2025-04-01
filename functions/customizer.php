@@ -104,7 +104,7 @@ $wp_customize->add_control('hero_adress', array(
     
     
     
-    ////////////////// nouvelle section
+    /////////////////////////////////////////////////////////////////// nouvelle section
     $wp_customize->add_section('footer_section', array(
       'title' => __('footer Section', 'theme_31w'),
       'priority' => 30,
@@ -147,6 +147,54 @@ $wp_customize->add_control('hero_adress', array(
       'label' => __('couleur svg footer', 'theme_31w'),
       'section' => 'footer_section',
     )));
+
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////////////// section 404
+    $wp_customize->add_section('p404_section', array(
+      'title' => __('p404 Section', 'theme_31w'),
+      'priority' => 30,
+      ));
+
+
+      /////////////// ajout message
+      $wp_customize->add_setting('p404_title', array(
+        'default' => __('404', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+        ));
+    
+    $wp_customize->add_control('p404_title', array(
+        'label' => __('title', 'theme_31w'),
+        'section' => 'p404_section',
+        'type' => 'text',
+        ));
+
+        ///////////////////ajout sous-titre 404
+        /////////////// ajout message
+      $wp_customize->add_setting('p404_subtitle', array(
+        'default' => __('404', 'theme_31w'),
+        'sanitize_callback' => 'sanitize_text_field'
+        ));
+    
+    $wp_customize->add_control('p404_subtitle', array(
+        'label' => __('subtitle', 'theme_31w'),
+        'section' => 'p404_section',
+        'type' => 'text',
+        ));
+
+        ////////////////// couleur texte 404
+        $wp_customize->add_setting('p404_text_color', array(
+          'default' => '',
+          'sanitize_callback' => 'esc_url_raw',
+        ));
+        
+        $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'p404_text_color', array(
+          'label' => __('couleur texte 404', 'theme_31w'),
+          'section' => 'p404_section',
+        )));
     
     }
     
