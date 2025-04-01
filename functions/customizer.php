@@ -196,6 +196,7 @@ $wp_customize->add_control('hero_adress', array(
           'section' => 'p404_section',
         )));
 
+
         /////////////////////// image background
         $wp_customize->add_setting('p404_background', array(
           'default' => '',

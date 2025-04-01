@@ -42,6 +42,10 @@
           'container' => 'div',
           'container_class' => 'retour'
         )); ?>
+
+                <div class="e404 recherche">
+                    <?php get_search_form() ?>
+                </div>
         <style>
             .hero__contenu.e404 .retour .menu li{
                 font-size: 1rem;
@@ -52,9 +56,22 @@
 
                 transition: filter .5s;
             }
-}
+            .e404.recherche .recherche__bouton{
+                display: none;
+            }
+            .e404.recherche input.recherche__input{
+                border: none;
+                border-bottom: 5px solid <?= $p404_text_color ?>;
+                width: auto;
+                height: 2.2rem;
+                background-color: rgba(0, 0, 0, 0);
+            }
+            .e404.recherche input.recherche__input::placeholder{
+                color: <?= $p404_text_color ?>;
+                opacity: 1;
+                font-size: 1.6rem;
+            }
         </style>
-
         </div>
     </section>
 
