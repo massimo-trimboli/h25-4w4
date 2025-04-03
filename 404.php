@@ -63,7 +63,7 @@
                 border: none;
                 border-bottom: 5px solid <?= $p404_text_color ?>;
                 width: auto;
-                height: 2.2rem;
+                height: 2.2rem; 
                 background-color: rgba(0, 0, 0, 0);
             }
             .e404.recherche input.recherche__input::placeholder{

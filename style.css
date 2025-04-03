@@ -251,6 +251,12 @@ layout
   display: none;
 }
 
+.article__list div {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
 .burger {
   display: none;
 }
