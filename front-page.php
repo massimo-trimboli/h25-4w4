@@ -23,10 +23,11 @@
 
 <!-- /////////////////////////////////////////////  section destination REST API -->
 <?php categories_liste("destination") ?>
-<section class="destination">
+<section class="destination global">
     <h2 class="destination__titre">Articles de la catégorie</h2>
     <div class="destination__list"></div>
 </section>
+
 
 <?php get_footer(); ?>
 </body>

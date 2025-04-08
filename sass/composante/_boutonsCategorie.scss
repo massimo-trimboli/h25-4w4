@@ -1,0 +1,30 @@
+.categorie__ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+
+    &__li{
+        font-size: 1.2rem;
+        color: #ffffff;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        border-radius: 4px;
+
+        &:hover{
+            background-color: #003a77;
+        }
+    }
+}
+
+
+.accordeon {
+    height: auto;
+    overflow: hidden;
+    max-height: 150px;
+
+    transition: max-height .15s linear;
+}
+.accordeon.isCollapsed{
+    max-height: 0;
+}
