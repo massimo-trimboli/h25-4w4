@@ -14,11 +14,25 @@
         &:hover{
             background-color: #003a77;
         }
+
+        &.actif{
+            background-color: #003a77;
+        }
     }
 }
 
 
+
+
+.destination__list h3{
+    background-color: rgb(217 217 217);
+    padding: 5px;
+    border-radius: 5px;
+    width:auto
+}
 .accordeon {
+    border-radius: 5px;
+
     height: auto;
     overflow: hidden;
     max-height: 150px;

@@ -7,7 +7,9 @@
 
 <?php get_header() ?>
 <h1 class="hidden">front-page.php</h1>
+<!-- ///////////////////// section hero -->
     <?php get_template_part("gabarit/hero") ?>
+<!-- ////////////////////////// section populaire -->
 
     <section class="populaire">
         <div class="boiteflex global">

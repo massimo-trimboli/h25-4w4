@@ -1,5 +1,5 @@
 (function(){
-    console.log("vive javascirpt");
+    //console.log("vive javascirpt");
 
     
         //const categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
@@ -11,12 +11,17 @@
         
         categorie__ul__li.forEach(li => {
             li.addEventListener("mousedown",function(){
-                console.log(li.dataset.id);
+                //console.log(li.dataset.id);
+                //ajouter classe
+                setActive(categorie__ul__li, li.dataset.id);
+                //generer les destinations
                 categoryId = li.dataset.id;
                 apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
 
                 videEtFetch(apiUrl);
             })
+            //ajouter la classe
+            setActive(categorie__ul__li, categoryId);
         });
     
         fetch(apiUrl)
@@ -24,6 +29,10 @@
             .then(data => {
                 const destinationList = document.querySelector('.destination__list');
                 data.forEach(article => {
+                    //on vet pas generer la galerie
+                    if(article.title.rendered == "Galerie"){
+                        return;
+                    }
                     const articleElement = document.createElement('article');
                     articleElement.innerHTML = `
                     <div>
@@ -41,11 +50,7 @@
                 for(let accordeon of accordeons){
                     papa = accordeon.parentElement;
                     papa.addEventListener("mousedown", function(){
-                        if (accordeon.classList.contains("isCollapsed")){
-                            accordeon.classList.remove("isCollapsed");
-                        } else{
-                            accordeon.classList.add("isCollapsed");
-                        }
+                        accordeon.classList.toggle("isCollapsed");
                     })
                 }
             })
@@ -66,6 +71,10 @@ function videEtFetch(url){
             .then(data => {
                 const destinationList = document.querySelector('.destination__list');
                 data.forEach(article => {
+                    //on vet pas generer la galerie
+                    if(article.title.rendered == "Galerie"){
+                        return;
+                    }
                     const articleElement = document.createElement('article');
                     articleElement.innerHTML = `
                 <div>
@@ -83,13 +92,18 @@ function videEtFetch(url){
                 for(let accordeon of accordeons){
                     papa = accordeon.parentElement;
                     papa.addEventListener("mousedown", function(){
-                        if (accordeon.classList.contains("isCollapsed")){
-                            accordeon.classList.remove("isCollapsed");
-                        } else{
-                            accordeon.classList.add("isCollapsed");
-                        }
+                        accordeon.classList.toggle("isCollapsed");
                     })
                 }
             })
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));
+}
+
+function setActive(array, id){
+    for(let elm of array){
+        elm.classList.remove("actif");
+        if(elm.dataset.id == id){
+            elm.classList.add("actif");
+        }
+    }
 }

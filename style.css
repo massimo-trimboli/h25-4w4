@@ -168,8 +168,19 @@ les composantes
 .categorie__ul__li:hover {
   background-color: #003a77;
 }
+.categorie__ul__li.actif {
+  background-color: #003a77;
+}
+
+.destination__list h3 {
+  background-color: rgb(217, 217, 217);
+  padding: 5px;
+  border-radius: 5px;
+  width: auto;
+}
 
 .accordeon {
+  border-radius: 5px;
   height: auto;
   overflow: hidden;
   max-height: 150px;
@@ -189,48 +200,6 @@ layout
   font-family: "Roboto", serif;
   display: flex;
   flex-flow: row wrap;
-}
-
-.hero {
-  min-height: 100vh;
-  background-image: url("images/maldives.jpg");
-  background-repeat: no-repeat;
-}
-.hero__contenu {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  height: auto;
-  align-items: flex-start;
-}
-.hero__titre {
-  margin: 13px;
-  font-size: 3rem;
-  text-shadow: 3px 3px 3px rgb(11, 128, 136);
-}
-.hero__description {
-  margin: 10px;
-}
-.hero__courriel {
-  margin: 10px;
-}
-.hero__phone {
-  margin: 10px;
-}
-.hero__adress {
-  margin: 10px;
-}
-.hero__bouton {
-  margin: 10px;
-  padding: 7px;
-  border-radius: 10px;
-  background-color: rgb(152, 255, 221);
-  border: 2px solid rgb(47, 167, 223);
-}
-.hero__icone-apps {
-  margin: 10px;
-  display: flex;
-  gap: 0 15px;
 }
 
 .hidden {
@@ -404,4 +373,55 @@ footer a {
 
 .hero__contenu.e404 .retour :hover {
   filter: invert(80%);
+}
+
+.hero {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+.hero__contenu {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: auto;
+  align-items: flex-start;
+}
+.hero__titre {
+  margin: 13px;
+  font-size: 3rem;
+  text-shadow: 3px 3px 3px rgb(11, 128, 136);
+}
+.hero__description {
+  margin: 10px;
+}
+.hero__courriel {
+  margin: 10px;
+}
+.hero__phone {
+  margin: 10px;
+}
+.hero__adress {
+  margin: 10px;
+}
+.hero__bouton {
+  margin: 10px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: rgb(152, 255, 221);
+  border: 2px solid rgb(47, 167, 223);
+}
+.hero__icone-apps {
+  margin: 10px;
+  display: flex;
+  gap: 0 15px;
+}
+.hero__carousel {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

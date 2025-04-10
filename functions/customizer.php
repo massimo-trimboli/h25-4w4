@@ -67,16 +67,17 @@ $wp_customize->add_control('hero_adress', array(
 ));
     
     //////////////////////////////////////////////////// background
-    
-    $wp_customize->add_setting('hero_background', array(
+    for($k=0; $k<3; $k++){
+      $wp_customize->add_setting('hero_background_'.$k, array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw',
-    ));
+      ));
     
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background', array(
-        'label' => __('Hero Background Image', 'theme_31w'),
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_'.$k, array(
+        'label' => __('Hero Background Image ' . ($k+1) , 'theme_31w'),
         'section' => 'hero_section',
-    )));
+     )));
+    }
     
     /////////////////////////// couleur texte hero
     
