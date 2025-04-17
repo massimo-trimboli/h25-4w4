@@ -66,7 +66,7 @@ $wp_customize->add_control('hero_adress', array(
   'type' => 'text',
 ));
     
-    //////////////////////////////////////////////////// background
+    //////////////////////////////////////////////////// background caroussel
     for($k=0; $k<3; $k++){
       $wp_customize->add_setting('hero_background_'.$k, array(
         'default' => '',

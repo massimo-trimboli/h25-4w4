@@ -7,15 +7,26 @@
       $hero_svg_color = get_theme_mod('hero_svg_color', '000000');
       $svg_color_poundless = substr($hero_svg_color, 1);
 
-      for($k=0; $k<3; $k++){
+      $nbCarousel = 3;
+      for($k=0; $k<$nbCarousel; $k++){
         $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
       }
       ?>
 
 <section class="hero">
-    <div class="hero__carousel" style="background-image: url(<?= $hero_background[0] ?>); background-repeat: no-repeat; color: <?= $hero_text_color ?>;"></div>
-    <div class="hero__carousel" style="background-image: url(<?= $hero_background[1] ?>); background-repeat: no-repeat; color: <?= $hero_text_color ?>;"></div>
-    <div class="hero__carousel" style="background-image: url(<?= $hero_background[2] ?>); background-repeat: no-repeat; color: <?= $hero_text_color ?>;"></div>
+    <!-- DIVs carousel -->
+    <?php   for($k=0; $k<$nbCarousel; $k++){    ?>
+    <div class="hero__carousel carouselActif" data-id="<?= $k ?>" style="background-image: url(<?= $hero_background[$k] ?>); background-repeat: no-repeat; color: <?= $hero_text_color ?>;"></div>
+    <?php } ?>
+    <!-- contenant boutons radio caroussel -->
+    <div class="hero__carousel__radio">
+        <form action="">
+            <?php   for($k=0; $k<$nbCarousel; $k++){  ?>
+            <input type="radio" name="carousel" data-id="<?= $k ?>" class="radio-carousel">
+            <?php } ?>
+        </form>
+    </div>
+
     <!-- /////////////////////////////// hero contenu -->
     <div class="hero__contenu global">
         <h1 class="hero__titre">
