@@ -105,7 +105,7 @@ $wp_customize->add_control('hero_adress', array(
     
     
     
-    /////////////////////////////////////////////////////////////////// nouvelle section
+    /////////////////////////////////////////////////////////////////// footer section
     $wp_customize->add_section('footer_section', array(
       'title' => __('footer Section', 'theme_31w'),
       'priority' => 30,
@@ -146,6 +146,19 @@ $wp_customize->add_control('hero_adress', array(
     
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_svg_color', array(
       'label' => __('couleur svg footer', 'theme_31w'),
+      'section' => 'footer_section',
+    )));
+
+
+    /////////////////////////// couleur background footer
+    
+    $wp_customize->add_setting('footer_background_color', array(
+      'default' => '',
+      'sanitize_callback' => 'esc_url_raw',
+    ));
+    
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_background_color', array(
+      'label' => __('footer background color', 'theme_31w'),
       'section' => 'footer_section',
     )));
 

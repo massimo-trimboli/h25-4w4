@@ -4,14 +4,20 @@
 
     $footer_svg_color = get_theme_mod('footer_svg_color', '000000');
     $svg_color_poundless = substr($footer_svg_color, 1);
+    
+    $footer_background_color = get_theme_mod('footer_background_color', '000000');
 
     //meme info que section hero
     $hero_email = get_theme_mod('hero_email', 'email@email.com'); 
     $hero_phone = get_theme_mod('hero_phone', '123-456-7890'); 
     $hero_adress = get_theme_mod('hero_adress', '123 rue adresse ville'); 
+
+
+    //permet dafficher une vague avant le footer
+    vague($footer_background_color);
 ?>
 
-<footer>
+<footer style="background-color: <?= $footer_background_color ?>;">
     <div class="piedpage global" style="color:<?= $footer_text_color ?>;">
         <section class="piedpage__s1">
 

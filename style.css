@@ -191,6 +191,12 @@ les composantes
   max-height: 0;
 }
 
+.wave {
+  position: relative;
+  top: 45px;
+  margin-top: -110px;
+}
+
 /* ////////////////////
 layout
 ////////////////////// */

@@ -6,7 +6,8 @@ $functions_dir = get_template_directory() . '/functions/';
 $function_files = array(
     'customizer.php',
     'options.php',
-    'genere-list-categorie.php'
+    'genere-list-categorie.php',
+    'vague.php'
 );
 
 // Boucle pour inclure tous les fichiers

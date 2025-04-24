@@ -26,6 +26,11 @@
             <?php } ?>
         </form>
     </div>
+    <style>
+        .hero__titre{
+            transform: rotate(180);
+        }
+    </style>
 
     <!-- /////////////////////////////// hero contenu -->
     <div class="hero__contenu global">
