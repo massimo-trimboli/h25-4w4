@@ -15,6 +15,10 @@
     for(let bouton of lesBoutons){
         bouton.addEventListener("change", switchSlide);
     }
+
+
+    //pour lanimation du titre lorse quon change de slide
+    animationListner();
 })()
 
 //fonction pour switcher automatiquement
@@ -69,5 +73,26 @@ function switchSlide(){
         if(slide.dataset.id == id){
             slide.classList.add("carouselActif");
         }
+    }
+
+    //faire animer le titre
+    animTitre();
+}
+
+
+//animer le titre
+//ajout listner pour enlever la classe animation
+function animationListner(){
+    let titre = document.querySelector(".hero__titre");
+
+    titre.addEventListener("animationend", function(){
+        titre.classList.remove("animTitre");
+    })
+}
+//doner la classe animation
+function animTitre(){
+    let titre = document.querySelector(".hero__titre");
+    if(titre!=null){
+        titre.classList.add("animTitre");
     }
 }

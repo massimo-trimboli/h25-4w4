@@ -110,6 +110,6 @@
     animation-timing-function: ease-in-out;
 }
 @keyframes animTitre {
-    from{transform: rotateY('0deg');}
-    to{transform: rotateY('0deg');}
+    from{transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
 }
