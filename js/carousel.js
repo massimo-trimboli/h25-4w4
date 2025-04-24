@@ -13,7 +13,7 @@
 
     //rajouter le event listner
     for(let bouton of lesBoutons){
-        bouton.addEventListener("click", switchSlide);
+        bouton.addEventListener("change", switchSlide);
     }
 })()
 

@@ -60,6 +60,7 @@
         opacity: 0;
         transition: opacity 0.5s;
 
+        /////// carousel
         &.carouselActif{
             opacity: 100%;
         }
@@ -76,7 +77,39 @@
             & form{
                 position: relative;
                 left: -50%;
+                display: flex;
+                flex-flow: row nowrap;
+            }
+
+            & input{
+                display: none;
+            }
+            & label div{
+                width: 11px;
+                height: 11px;
+                margin: 10px;
+                margin-bottom: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                background-color: white;
+
+                transition: background-color 1s, border .25s, transform .5s;
+            }
+            & input:checked + label>div{
+                background-color: black;
+                border: 3px solid white;
+                transform: rotate(-45deg);
             }
         }
     }
 } 
+////animation du titre
+.animTitre{
+    animation-name: animTitre;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animTitre {
+    from{transform: rotateY('0deg');}
+    to{transform: rotateY('0deg');}
+}

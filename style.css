@@ -446,4 +446,39 @@ footer a {
 .hero__carousel__radio form {
   position: relative;
   left: -50%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.hero__carousel__radio input {
+  display: none;
+}
+.hero__carousel__radio label div {
+  width: 11px;
+  height: 11px;
+  margin: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  transition: background-color 1s, border 0.25s, transform 0.5s;
+}
+.hero__carousel__radio input:checked + label > div {
+  background-color: black;
+  border: 3px solid white;
+  transform: rotate(-45deg);
+}
+
+.animTitre {
+  animation-name: animTitre;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animTitre {
+  from {
+    transform: rotateY("0deg");
+  }
+  to {
+    transform: rotateY("0deg");
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -22,15 +22,11 @@
     <div class="hero__carousel__radio">
         <form action="">
             <?php   for($k=0; $k<$nbCarousel; $k++){  ?>
-            <input type="radio" name="carousel" data-id="<?= $k ?>" class="radio-carousel">
+            <input type="radio" name="carousel" id="carousel<?= $k ?>" data-id="<?= $k ?>" class="radio-carousel">
+            <label for="carousel<?= $k ?>"><div></div></label>
             <?php } ?>
         </form>
     </div>
-    <style>
-        .hero__titre{
-            transform: rotate(180);
-        }
-    </style>
 
     <!-- /////////////////////////////// hero contenu -->
     <div class="hero__contenu global">
