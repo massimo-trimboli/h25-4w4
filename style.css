@@ -245,6 +245,8 @@ layout
   align-items: center;
   margin: none;
   width: 100%;
+  background-color: #ffffff;
+  z-index: 99999;
 }
 @media screen and (max-width: 500px) {
   .entete {
@@ -432,7 +434,7 @@ footer a {
   left: 0;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 3s;
 }
 .hero__carousel.carouselActif {
   opacity: 100%;
@@ -472,29 +474,35 @@ footer a {
   overflow: hidden;
 }
 
-.slot-machine-anim {
-  animation-name: slot_machine;
-  animation-duration: 2s;
-  animation-timing-function: cubic-bezier(1, -0.11, 0.31, 0.67);
-}
-
 .spin-anim {
   animation-name: spinAnim;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.4, 0.18, 0.77, 1.27);
 }
 
+.slot-machine-anim-y {
+  animation-name: slot_machine_y;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(1, -0.11, 0.31, 0.67);
+}
+
+.slot-machine-anim-x {
+  animation-name: slot_machine_x;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(1, -0.11, 0.31, 0.67);
+}
+
 @keyframes spinAnim {
   from {
-    transform: rotateY(0deg);
+    transform: rotateZ(0deg);
   }
   to {
-    transform: rotateY(360deg);
+    transform: rotateZ(360deg);
   }
 }
-@keyframes slot_machine {
+@keyframes slot_machine_y {
   0% {
-    transform: translateY(0);
+    transform: translate(0, 0);
   }
   55% {
     transform: translate(0, 100vh);
@@ -507,6 +515,26 @@ footer a {
   }
   58% {
     transform: translate(0, -100vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes slot_machine_x {
+  0% {
+    transform: translate(0, 0);
+  }
+  55% {
+    transform: translate(100vw, 0);
+  }
+  56% {
+    transform: translate(100vw, 100vh);
+  }
+  57% {
+    transform: translate(-100vw, 100vh);
+  }
+  58% {
+    transform: translate(-100vw, 0);
   }
   100% {
     transform: translate(0, 0);

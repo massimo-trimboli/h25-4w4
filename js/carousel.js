@@ -9,7 +9,7 @@
     switchSlide();
 
     //automatisation
-    let interval = setInterval(autoSwitch, 10000);
+    let interval = setInterval(autoSwitch, 30000);
 
     //rajouter le event listner
     for(let bouton of lesBoutons){
@@ -97,7 +97,8 @@ function animationListner(){
    for(let child of enfants){
     child.addEventListener("animationend", function(){
         child.classList.remove("spin-anim");
-        child.classList.remove("slot-machine-anim");
+        child.classList.remove("slot-machine-anim-y");
+        child.classList.remove("slot-machine-anim-x");
     })
    }
 }
@@ -114,17 +115,23 @@ function animTitre(){
     let contenuHero = document.querySelector(".hero__contenu");
     let enfants = contenuHero.children;
 
-    if(contenuHero.dataset.anim == 1){
+    if(contenuHero.dataset.anim == 0){
         for(let child of enfants){
             child.classList.add("spin-anim");
+
+            contenuHero.dataset.anim = 1;
+        }
+    } else if(contenuHero.dataset.anim == 1){
+        for(let child of enfants){
+            child.classList.add("slot-machine-anim-y");
 
             contenuHero.dataset.anim = 2;
         }
     } else if(contenuHero.dataset.anim == 2){
         for(let child of enfants){
-            child.classList.add("slot-machine-anim");
+            child.classList.add("slot-machine-anim-x");
 
-            contenuHero.dataset.anim = 1;
+            contenuHero.dataset.anim = 0;
         }
     }
 }

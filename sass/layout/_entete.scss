@@ -21,6 +21,9 @@
     align-items: center;
     margin: none;
     width: 100%;
+
+    background-color: #ffffff;
+    z-index: 99999;
     @media screen and (max-width:$point_rupture){
         height: 15vh;
     }
