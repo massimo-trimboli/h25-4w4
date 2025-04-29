@@ -7,7 +7,7 @@
       $hero_svg_color = get_theme_mod('hero_svg_color', '000000');
       $svg_color_poundless = substr($hero_svg_color, 1);
 
-      $nbCarousel = 3;
+      $nbCarousel = get_theme_mod('hero_nb_carousel', '3'); 
       for($k=0; $k<$nbCarousel; $k++){
         $hero_background[$k] = get_theme_mod('hero_background_' . $k, 'Default Title');
       }

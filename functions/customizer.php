@@ -66,6 +66,19 @@ $wp_customize->add_control('hero_adress', array(
   'type' => 'text',
 ));
     
+
+
+/////////////// nombre d'images de carousel
+$wp_customize->add_setting('hero_nb_carousel', array(
+  'default' => __('3', 'theme_31w'),
+  'sanitize_callback' => 'sanitize_text_field'
+  ));
+
+$wp_customize->add_control('hero_nb_carousel', array(
+  'label' => __("hero nombre d'images de carousel", 'theme_31w'),
+  'section' => 'hero_section',
+  'type' => 'int',
+  ));
     //////////////////////////////////////////////////// background caroussel
     for($k=0; $k<3; $k++){
       $wp_customize->add_setting('hero_background_'.$k, array(
