@@ -9,7 +9,7 @@
     switchSlide();
 
     //automatisation
-    let interval = setInterval(autoSwitch, 5000);
+    let interval = setInterval(autoSwitch, 10000);
 
     //rajouter le event listner
     for(let bouton of lesBoutons){
