@@ -29,7 +29,7 @@
     </div>
 
     <!-- /////////////////////////////// hero contenu -->
-    <div class="hero__contenu global">
+    <div class="hero__contenu global" data-anim="1">
         <h1 class="hero__titre">
             <?php  bloginfo('name'); ?>
         </h1>

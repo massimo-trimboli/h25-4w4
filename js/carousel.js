@@ -83,16 +83,48 @@ function switchSlide(){
 //animer le titre
 //ajout listner pour enlever la classe animation
 function animationListner(){
-    let titre = document.querySelector(".hero__titre");
+    
+    // let titre = document.querySelector(".hero__titre");
 
-    titre.addEventListener("animationend", function(){
-        titre.classList.remove("animTitre");
+    // titre.addEventListener("animationend", function(){
+    //     titre.classList.remove("spin-anim");
+    // })
+    
+
+   let contenuHero = document.querySelector(".hero__contenu");
+   let enfants = contenuHero.children;
+
+   for(let child of enfants){
+    child.addEventListener("animationend", function(){
+        child.classList.remove("spin-anim");
+        child.classList.remove("slot-machine-anim");
     })
+   }
 }
 //doner la classe animation
 function animTitre(){
-    let titre = document.querySelector(".hero__titre");
-    if(titre!=null){
-        titre.classList.add("animTitre");
+    
+    // let titre = document.querySelector(".hero__titre");
+    // if(titre!=null){
+    //     titre.classList.add("spin-anim");
+    // }
+    
+
+
+    let contenuHero = document.querySelector(".hero__contenu");
+    let enfants = contenuHero.children;
+
+    if(contenuHero.dataset.anim == 1){
+        for(let child of enfants){
+            child.classList.add("spin-anim");
+
+            contenuHero.dataset.anim = 2;
+        }
+    } else if(contenuHero.dataset.anim == 2){
+        for(let child of enfants){
+            child.classList.add("slot-machine-anim");
+
+            contenuHero.dataset.anim = 1;
+        }
     }
 }

@@ -472,18 +472,24 @@ footer a {
   overflow: hidden;
 }
 
-.animTitre {
+.slot-machine-anim {
   animation-name: slot_machine;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(1, -0.11, 0.31, 0.67);
 }
 
-@keyframes animTitre {
-  0% {
-    top: -100vh;
+.spin-anim {
+  animation-name: spinAnim;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.4, 0.18, 0.77, 1.27);
+}
+
+@keyframes spinAnim {
+  from {
+    transform: rotateY(0deg);
   }
-  100% {
-    top: 0;
+  to {
+    transform: rotateY(360deg);
   }
 }
 @keyframes slot_machine {
