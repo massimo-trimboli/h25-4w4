@@ -59,6 +59,18 @@
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(1,-0.11,.31,.67);
 }
+.shimmy-swivel-anim{
+    animation-name: shimmy-swivel-anim;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out
+}
+.stretch-anim{
+    animation-name: stretch-anim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out
+}
+
+
 
 @keyframes spinAnim {
     from{
@@ -108,5 +120,53 @@
     }
     100%{
         transform: translate(0,0);
+    }
+}
+
+@keyframes shimmy-swivel-anim {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(2deg);
+    }
+    20%{
+        transform: rotate(-2deg);
+    }
+    30%{
+        transform: rotate(2deg);
+    }
+    40%{
+        transform: rotate(-2deg);
+    }
+    50%{
+        transform: rotate(2deg);
+    }
+    60%{
+        transform: rotate(-2deg);
+    }
+    70%{
+        transform: rotate(2deg);
+    }
+    80%{
+        transform: rotate(-2deg);
+    }
+    90%{
+        transform: rotate(2deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes stretch-anim {
+    0%{
+        transform: scale(1, 1);
+    }
+    50%{
+        transform: scale(1.1, 0.75);
+    }
+    100%{
+        transform: scale(1, 1);
     }
 }

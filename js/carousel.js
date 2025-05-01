@@ -4,9 +4,11 @@
 
     //définir les animations ici
     let lesAnimations = [
-        "spin-anim",
+        //"spin-anim",
         "slot-machine-anim-y",
-        "slot-machine-anim-x"
+        "slot-machine-anim-x",
+        "shimmy-swivel-anim",
+        "stretch-anim"
     ]
 
     //en allumer un au debut
@@ -66,10 +68,8 @@ function switchSlide(lesAnimations){
     //jouer une animation avant de changer la slide acive
     //les slides changeront entre 2 animations
     for(let uneSlide of lesSlides){
-        console.log("1");
         uneSlide.classList.remove("clip-anim-reverse");
         uneSlide.classList.add("clip-anim");
-        console.log("2");
     }
     //changer la slide acive à la fin de l'animation qui dure 2s
     setTimeout(function(){
@@ -130,10 +130,34 @@ function animTitre(lesAnimations){
     let contenuHero = document.querySelector(".hero__contenu");
     let enfants = contenuHero.children;
 
-    for(let child of enfants){
-        child.classList.add(
-            lesAnimations[contenuHero.dataset.anim]
-        );
+    //effets specifiques à certaines animations
+    //sinon tout animer en meme temps
+    if(lesAnimations[contenuHero.dataset.anim] == "stretch-anim"){
+        let delay = 0;
+        let increment = 250;
+
+        for(let child of enfants){
+            setTimeout(function(){
+                child.classList.add("stretch-anim");
+            }, delay);
+            delay+= increment;
+        }
+    } else if(lesAnimations[contenuHero.dataset.anim] == "shimmy-swivel-anim"){
+        let delay = 0;
+        let increment = 250;
+
+        for(let child of enfants){
+            setTimeout(function(){
+                child.classList.add("shimmy-swivel-anim");
+            }, delay);
+            delay+= increment;
+        }
+    } else{
+        for(let child of enfants){
+            child.classList.add(
+                lesAnimations[contenuHero.dataset.anim]
+            );
+        }
     }
 
     //incrementer animation
