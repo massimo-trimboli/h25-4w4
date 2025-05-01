@@ -19,8 +19,7 @@
     switchSlide(lesAnimations);
 
     //automatisation
-    let interval = setInterval(function(){autoSwitch(lesAnimations);}, 30000);
-
+    let interval = setInterval(function(){autoSwitch(lesAnimations, interval);}, 30000);
     //rajouter le event listner
     for(let bouton of lesBoutons){
         bouton.addEventListener("change", function(){switchSlide(lesAnimations)});
@@ -32,7 +31,7 @@
 })()
 
 //fonction pour switcher automatiquement
-function autoSwitch(lesAnimations){
+function autoSwitch(lesAnimations, interval){
     let lesBoutons = document.querySelectorAll(".radio-carousel");
 
     //trouver bouton checked
@@ -57,7 +56,7 @@ function autoSwitch(lesAnimations){
         }
     }
 
-    switchSlide(lesAnimations);
+    switchSlide(lesAnimations, interval);
 }
 
 //fonction qui switch a la slide correspondant au bouton checked
