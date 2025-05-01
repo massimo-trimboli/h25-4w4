@@ -29,6 +29,7 @@
     </div>
 
     <!-- /////////////////////////////// hero contenu -->
+    <!-- hero__contenu contient l'information pour l'animation du titre -->
     <div class="hero__contenu global" data-anim="0">
         <h1 class="hero__titre">
             <?php  bloginfo('name'); ?>

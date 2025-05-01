@@ -60,6 +60,9 @@
         opacity: 0;
         transition: opacity 3s;
 
+        //pour que le fond decran soit derriere le header
+        z-index: -1;
+
         /////// carousel
         &.carouselActif{
             opacity: 100%;

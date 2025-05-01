@@ -15,7 +15,7 @@
 }
 
 .entete{
-    max-width: 98vw;
+    max-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,6 +23,7 @@
     width: 100%;
 
     background-color: #ffffff;
+    position: relative;
     z-index: 99999;
     @media screen and (max-width:$point_rupture){
         height: 15vh;
