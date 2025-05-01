@@ -4,6 +4,45 @@
     }
 }
 
+
+////animation de l'image
+.clip-anim{
+    animation-name: clip-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.33,.03,.06,1)
+}
+.clip-anim-reverse{
+    animation-name: clip-anim-reverse;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.33,.03,.06,1)
+}
+
+@keyframes clip-anim {
+    0%{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -25% 100%);
+    }
+    85%{
+        clip-path: polygon(125% 0%, 100% 0%, 100% 100%, 100% 100%);
+    }
+    100%{
+        clip-path: polygon(125% 0%, 100% 0%, 100% 100%, 100% 100%);
+    }
+}
+@keyframes clip-anim-reverse {
+    0%{
+        clip-path: polygon(125% 0%, 100% 0%, 100% 100%, 100% 100%);
+    }
+    85%{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -25% 100%);
+    }
+    100%{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -25% 100%);
+    }
+}
+
+
 ////animation du titre
 .spin-anim{
     animation-name: spinAnim;

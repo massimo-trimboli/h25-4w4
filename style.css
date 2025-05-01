@@ -435,7 +435,6 @@ footer a {
   left: 0;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 3s;
   z-index: -1;
 }
 .hero__carousel.carouselActif {
@@ -476,6 +475,42 @@ footer a {
   overflow: hidden;
 }
 
+.clip-anim {
+  animation-name: clip-anim;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.33, 0.03, 0.06, 1);
+}
+
+.clip-anim-reverse {
+  animation-name: clip-anim-reverse;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.33, 0.03, 0.06, 1);
+}
+
+@keyframes clip-anim {
+  0% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -25% 100%);
+  }
+  85% {
+    clip-path: polygon(125% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(125% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+}
+@keyframes clip-anim-reverse {
+  0% {
+    clip-path: polygon(125% 0%, 100% 0%, 100% 100%, 100% 100%);
+  }
+  85% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -25% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, -25% 100%);
+  }
+}
 .spin-anim {
   animation-name: spinAnim;
   animation-duration: 1s;

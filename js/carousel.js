@@ -63,25 +63,44 @@ function switchSlide(lesAnimations){
     let lesBoutons = document.querySelectorAll(".radio-carousel");
     let lesSlides = document.querySelectorAll(".hero__carousel");
 
-    //enlever la classe
+    //jouer une animation avant de changer la slide acive
+    //les slides changeront entre 2 animations
     for(let uneSlide of lesSlides){
-        uneSlide.classList.remove("carouselActif");
+        console.log("1");
+        uneSlide.classList.remove("clip-anim-reverse");
+        uneSlide.classList.add("clip-anim");
+        console.log("2");
     }
-
-    //trouver le id
-    let id;
-    for(let bouton of lesBoutons){
-        if(bouton.checked){
-            id = bouton.dataset.id;
+    //changer la slide acive à la fin de l'animation qui dure 2s
+    setTimeout(function(){
+        //enlever la classe
+        for(let uneSlide of lesSlides){
+            uneSlide.classList.remove("carouselActif");
         }
-    }
 
-    //doner la classe au slide du carousel
-    for(let slide of lesSlides){
-        if(slide.dataset.id == id){
-            slide.classList.add("carouselActif");
+        //trouver le id
+        let id;
+        for(let bouton of lesBoutons){
+            if(bouton.checked){
+                id = bouton.dataset.id;
+            }
         }
-    }
+
+        //doner la classe au slide du carousel
+        for(let slide of lesSlides){
+            if(slide.dataset.id == id){
+                slide.classList.add("carouselActif");
+            }
+        }
+
+        //jouer une animation avant de changer la slide acive
+        //les slides changeront entre 2 animations
+        for(let uneSlide of lesSlides){
+            uneSlide.classList.remove("clip-anim");
+            uneSlide.classList.add("clip-anim-reverse");
+        }
+    }, 2000)
+    
 
     //faire animer le titre
     animTitre(lesAnimations);
@@ -96,22 +115,20 @@ function animationListner(lesAnimations){
 
    for(let child of enfants){
     child.addEventListener("animationend", function(){
+        //neleve toute les animations
         for(uneAnimation of lesAnimations){
             child.classList.remove(uneAnimation);
         }
     })
    }
 }
+
 //doner la classe animation
 function animTitre(lesAnimations){
+    //contenuHero contient l'index de l'animation à jouer
+    //et on joue les animations sur chaque enfant de contenuHero
     let contenuHero = document.querySelector(".hero__contenu");
     let enfants = contenuHero.children;
-
-    // let lesAnimations = [
-    //     "spin-anim",
-    //     "slot-machine-anim-y",
-    //     "slot-machine-anim-x"
-    // ]
 
     for(let child of enfants){
         child.classList.add(
