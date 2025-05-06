@@ -7,7 +7,8 @@ $function_files = array(
     'customizer.php',
     'options.php',
     'genere-list-categorie.php',
-    'vague.php'
+    'vague.php',
+    'retirer_categorie.php'
 );
 
 // Boucle pour inclure tous les fichiers
