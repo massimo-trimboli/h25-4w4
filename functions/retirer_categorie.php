@@ -22,7 +22,6 @@
                 <?php echo $cat->slug; ?>
             </a>
         </li>
-        <?php endif; ?>
+        <?php endif; endforeach; ?>
     </ul>
-
-<?php endforeach; } ?>
+<?php } ?>
