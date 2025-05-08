@@ -4,7 +4,11 @@
     
         //const categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
         let categoryId = 3; // Remplacez par l'ID de la catégorie souhaitée
-        const domaine = window.location.href;
+
+        //permet de trouver le domaine
+        // const domaine = window.location.href;
+        const domaine = document.querySelector("base").getAttribute("href");
+        console.log("domaine: "+domaine);
         //const apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
         let apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
         const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");

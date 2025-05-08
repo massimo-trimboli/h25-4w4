@@ -11,23 +11,25 @@
         "stretch-anim"
     ]
 
-    //en allumer un au debut
-    for(let uneSlide of lesSlides){
-        uneSlide.classList.remove("carouselActif");
-    }
-    lesBoutons[0].checked = true;
-    switchSlide(lesAnimations);
+    if(lesSlides && lesBoutons){
+        //en allumer un au debut
+        for(let uneSlide of lesSlides){
+            uneSlide.classList.remove("carouselActif");
+        }
+        lesBoutons[0].checked = true;
+        switchSlide(lesAnimations);
 
-    //automatisation
-    let interval = setInterval(function(){autoSwitch(lesAnimations, interval);}, 30000);
-    //rajouter le event listner
-    for(let bouton of lesBoutons){
-        bouton.addEventListener("change", function(){switchSlide(lesAnimations)});
-    }
+        //automatisation
+        let interval = setInterval(function(){autoSwitch(lesAnimations, interval);}, 30000);
+        //rajouter le event listner
+        for(let bouton of lesBoutons){
+            bouton.addEventListener("change", function(){switchSlide(lesAnimations)});
+        }
 
 
-    //pour lanimation du titre lorse quon change de slide
-    animationListner(lesAnimations);
+        //pour lanimation du titre lorse quon change de slide
+        animationListner(lesAnimations);
+        }
 })()
 
 //fonction pour switcher automatiquement
