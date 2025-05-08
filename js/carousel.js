@@ -7,7 +7,7 @@
         //"spin-anim",
         "slot-machine-anim-y",
         "slot-machine-anim-x",
-        "shimmy-swivel-anim",
+        // "shimmy-swivel-anim",
         "stretch-anim"
     ]
 
