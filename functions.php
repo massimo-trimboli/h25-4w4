@@ -8,7 +8,8 @@ $function_files = array(
     'options.php',
     'genere-list-categorie.php',
     'vague.php',
-    'retirer_categorie.php'
+    'retirer_categorie.php',
+    'generer-icones-sociaux.php'
 );
 
 // Boucle pour inclure tous les fichiers

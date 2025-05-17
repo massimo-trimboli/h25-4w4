@@ -18,32 +18,4 @@
 </section>
 
 
-
-<style>
-    .wave{
-        overflow: hidden;
-    }
-    .wave--svg{
-        position: relative;
-        transform: scaleX(1.5);
-        right: -24.9%;
-
-        animation-name: wave;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-
-        animation-timing-function: linear;
-    }
-
-    @keyframes wave {
-        from{
-            right: -24.9%;
-        }
-        to{
-            right: 25%;
-        }
-    }
-</style>
-
 <?php } ?>
