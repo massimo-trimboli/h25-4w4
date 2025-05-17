@@ -49,7 +49,9 @@
         <button class="hero__bouton">
             Inscription
         </button>
-        <?php iconesSociaux($svg_color_poundless) ?>
+        <div class="hero__icone-app">
+            <?php iconesSociaux($svg_color_poundless) ?>
+        </div>
         <p class="author">Autheur: <?= $hero_author ?></p>
     </div>
     </section>
