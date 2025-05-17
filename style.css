@@ -207,6 +207,7 @@ les composantes
   overflow: hidden;
 }
 .wave--svg {
+  position: relative;
   transform: scaleX(1.5);
   right: -24.9%;
   animation-name: wave;
