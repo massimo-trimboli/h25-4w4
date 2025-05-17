@@ -17,7 +17,12 @@
                         }
                     ?>
                 <h2 class="populaire__titre"><?php the_title(); ?></h2>
+                <p>offert par: <?php if(get_field("nom_auteur")){echo the_field("nom_auteur");} else {echo "PHP Airlines";}  ?></p>
+                <p> à partir du  <?php if(get_field("date_publication")){echo the_field("date_publication");} else {echo "11 septembre 2001";}  ?></p>
                 <div class="populaire__contenu"><?php the_content(); ?></div>
+                <div class="carte__contenantBoutons">
+                    <?php categorie_par_destination("populaire"); ?>
+                </div>
             </article>
             <?php endwhile; endif; ?>
         </div>
