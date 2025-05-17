@@ -20,6 +20,8 @@
                 <p>offert par: <?php if(get_field("nom_auteur")){echo the_field("nom_auteur");} else {echo "PHP Airlines";}  ?></p>
                 <p> à partir du  <?php if(get_field("date_publication")){echo the_field("date_publication");} else {echo "11 septembre 2001";}  ?></p>
                 <div class="populaire__contenu"><?php the_content(); ?></div>
+                <p>température maximum: &nbsp<?php echo the_field("temperature_maximum") ?>&#8451;</p>
+                <p>température minimum: <?php echo the_field("temperature_minimum") ?>&#8451;</p>
                 <div class="carte__contenantBoutons">
                     <?php categorie_par_destination("populaire"); ?>
                 </div>
