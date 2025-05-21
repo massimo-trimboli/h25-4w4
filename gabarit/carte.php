@@ -2,6 +2,8 @@
     /**
      * gabarit permettant dafficher une carte
      */
+
+     $default_image = get_theme_mod('hero_background_'.'1', 'Default Title');
 ?>
 
 
@@ -15,9 +17,11 @@
                     <?php
                     //permet dafficher la petite image (thumbnail) de larticvle quon appel image mise en avant
                         if(has_post_thumbnail()) {
-                            the_post_thumbnail('thumbnail'); 
-                        }
-                    ?>
+                            the_post_thumbnail('medium'); 
+                        } else{
+                            ?>
+                            <img src="<?= $default_image ?>" alt="image défaut">
+                        <?php } ?>
                 </figure>
                 <div class="carte__contenu">
                     

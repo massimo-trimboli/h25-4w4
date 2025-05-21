@@ -3,6 +3,10 @@
  *  index.php est le modèle par défaut
  *  si aucun modèle peut satisfaire la requête http dans ce cas c'est index.php qui affichera le contenu de la page
  */
+
+ $default_image = get_theme_mod('hero_background_'.'1', 'Default Title');
+
+
 ?>
 <?php get_header() ?>
 <h1 class="hidden">single.php</h1>
@@ -14,8 +18,10 @@
                     //permet dafficher la petite image (thumbnail) de larticvle quon appel image mise en avant
                         if(has_post_thumbnail()) {
                             the_post_thumbnail('medium'); 
-                        }
-                    ?>
+                        } else{
+                            ?>
+                            <img src="<?= $default_image ?>" alt="image défaut" style="width: 18.75rem;">
+                        <?php } ?>
                 <h2 class="populaire__titre"><?php the_title(); ?></h2>
                 <p>offert par: <?php if(get_field("nom_auteur")){echo the_field("nom_auteur");} else {echo "PHP Airlines";}  ?></p>
                 <p> à partir du  <?php if(get_field("date_publication")){echo the_field("date_publication");} else {echo "11 septembre 2001";}  ?></p>
