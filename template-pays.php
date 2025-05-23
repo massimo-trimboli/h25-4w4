@@ -17,11 +17,14 @@ Template Name: Template pays
 
 <?php
     $color = "#adffad";
-    vague2($color, 0); 
+    vague2("white", $color); 
 ?>
 
-<section style="background-color: <?= $color ?>;">
-    
+<section class="destination pays" style="background-color: <?= $color ?>;">
+    <?php //categories_liste("destination") ?>
+    <?php pays_liste(); ?>
+    <h2 class="destination__titre">Articles de la catégorie</h2>
+    <div class="destination__list"></div>
 </section>
 
 <?php get_footer() ?>

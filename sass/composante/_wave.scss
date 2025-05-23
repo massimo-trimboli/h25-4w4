@@ -2,10 +2,12 @@
     position: relative;
     top: 45px;
     margin-top: -110px;
+    margin-bottom: 0;
 
     overflow: hidden;
 
     &--svg{
+        margin: 0;
         position: relative;
         transform: scaleX(1.5);
         right: -24.9%;

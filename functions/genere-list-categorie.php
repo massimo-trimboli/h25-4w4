@@ -32,4 +32,19 @@ function categories_liste($parent_slug){
         echo 'Aucune sous-catégorie trouvée pour "destination".';
     }
 }
+
+
+function pays_liste(){
+    //definir les pays
+    $lesPays = ["France", "États-Unis", "Canada", "Argentine", "Chili", "Belgique", "Maroc", "Mexique", "Japon", "Italie", "Islande", "Chine", "Grèce", "Suisse"];
+
+    echo '<ul class="categorie__ul">';
+
+    foreach($lesPays as $pays){
+        // Afficher le nom de chaque sous-catégorie
+        echo '<li  data-id="' . esc_html($pays) . '" class="categorie__ul__li">' . esc_html($pays) . '</li>';
+    }
+
+    echo '</ul>';
+}
 ?>

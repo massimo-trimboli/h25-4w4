@@ -14,7 +14,8 @@
 
 
     //permet dafficher une vague avant le footer
-    vague($footer_background_color);
+    //vague($footer_background_color);
+    vague2("#adffad", $footer_background_color);
 ?>
 
 <footer style="background-color: <?= $footer_background_color ?>;">

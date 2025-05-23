@@ -204,9 +204,11 @@ les composantes
   position: relative;
   top: 45px;
   margin-top: -110px;
+  margin-bottom: 0;
   overflow: hidden;
 }
 .wave--svg {
+  margin: 0;
   position: relative;
   transform: scaleX(1.5);
   right: -24.9%;
@@ -237,6 +239,13 @@ les composantes
 }
 .pays h3 span.gras {
   font-weight: bolder;
+}
+
+section.pays.destination {
+  width: auto;
+  padding: 25px;
+  margin-top: 0;
+  padding-bottom: 100PX;
 }
 
 /* ////////////////////
