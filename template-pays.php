@@ -15,4 +15,13 @@ Template Name: Template pays
     </div>
 </section>
 
+<?php
+    $color = "#adffad";
+    vague2($color, 0); 
+?>
+
+<section style="background-color: <?= $color ?>;">
+    
+</section>
+
 <?php get_footer() ?>
