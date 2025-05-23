@@ -14,14 +14,19 @@
 
         let apiUrl = `${domaine}/wp-json/wp/v2/posts?categories=${categoryId}`;
         
-        if(document.querySelector("div.destination__list").dataset.method == "search"){
-            categoryId = paysDefaut;
-            let apiUrl = `${domaine}/wp-json/wp/v2/posts?search=${categoryId}`;
-            // console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
-            // videEtFetch(apiUrl);
-            // console.log("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
-            // console.log("apiUrl = "+apiUrl);
-        }
+        /**
+         * ce code ne marche pas ici et je ne sais pas pourquoi mais il 
+         * marche si je le met à la fin du fetch alors je l'ai copié collé la-bas
+         */
+        //// set france par defaut si la methode est "search"
+        // if(document.querySelector("div.destination__list").dataset.method == "search"){
+        //     categoryId = paysDefaut;
+        //     let apiUrl = `${domaine}/wp-json/wp/v2/posts?search=${categoryId}`;
+        //     // console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+        //     // videEtFetch(apiUrl);
+        //     // console.log("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
+        //     // console.log("apiUrl = "+apiUrl);
+        // }
 
         const categorie__ul__li = document.querySelectorAll(".categorie__ul__li");
         
@@ -74,17 +79,16 @@
                         accordeon.classList.toggle("isCollapsed");
                     })
                 }
+
+                //////// si la methode est search utiliser la france
+                if(document.querySelector("div.destination__list").dataset.method == "search"){
+                    categoryId = paysDefaut;
+                    let apiUrl = `${domaine}/wp-json/wp/v2/posts?search=${categoryId}`;
+                    console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+                    videEtFetch(apiUrl);
+                }
             })
             .catch(error => console.error('Erreur lors de la récupération des articles:', error));
-        
-        if(document.querySelector("div.destination__list").dataset.method == "search"){
-            categoryId = paysDefaut;
-            let apiUrl = `${domaine}/wp-json/wp/v2/posts?search=${categoryId}`;
-            console.log("BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
-            // videEtFetch(apiUrl);
-            // console.log("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
-            // console.log("apiUrl = "+apiUrl);
-        }
 
 
 })()
