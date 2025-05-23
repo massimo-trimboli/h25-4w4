@@ -225,6 +225,20 @@ les composantes
     right: 25%;
   }
 }
+.pays {
+  width: 90vw;
+}
+.pays__article {
+  border: 1px solid #cccccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 44%;
+  margin: 10px;
+}
+.pays h3 span.gras {
+  font-weight: bolder;
+}
+
 /* ////////////////////
 layout
 ////////////////////// */

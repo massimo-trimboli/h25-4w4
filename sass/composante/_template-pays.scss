@@ -1,0 +1,17 @@
+.pays{
+    width: 90vw;
+    // display: flex;
+    // flex-flow: row nowrap;
+
+    &__article{
+        border: 1px solid #cccccc;
+        padding: 20px;
+        border-radius: 8px;
+        width: 44%;
+        margin: 10px;
+    }
+
+    & h3 span.gras{
+        font-weight: bolder;
+    }
+}
