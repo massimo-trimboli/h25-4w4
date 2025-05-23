@@ -21,7 +21,7 @@ Template Name: Template pays
         <?php the_content(); ?>
         <?php endif; ?>
     </div>
-</section>
+</section> 
 
 <?php
     $color = "#adffad";
