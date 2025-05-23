@@ -24,7 +24,7 @@ Template Name: Template pays
     <?php //categories_liste("destination") ?>
     <?php pays_liste(); ?>
     <h2 class="destination__titre">Articles de la catégorie</h2>
-    <div class="destination__list"></div>
+    <div data-method="search" class="destination__list"></div>
 </section>
 
 <?php get_footer() ?>
